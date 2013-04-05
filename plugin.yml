@@ -1,0 +1,4 @@
+name: LabelFrames
+main: com.alphahelical.bukkit.labelframes.LabelFrames
+version: 0.1a
+depend: [SGCore]

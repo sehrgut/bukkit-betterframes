@@ -1,0 +1,5 @@
+loglevel: off
+item-removal:
+  try-inventory-place: true
+  drop-on-failure: true
+  drop-mode: scatter # possible values: place|scatter
