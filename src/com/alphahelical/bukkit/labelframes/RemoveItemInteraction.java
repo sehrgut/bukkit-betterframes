@@ -26,7 +26,7 @@ public class RemoveItemInteraction implements IItemFrameInteraction {
 	@Override
 	public boolean doBehaviour(Player p, ItemFrame f, Cancellable e) {
 		e.setCancelled(true);
-		
+		// TODO: config item-removal.tool defaults to AIR, but can be ANY
 		ItemStack item = f.getItem();
 		Inventory inv = p.getInventory();
 		Location loc = f.getLocation();

@@ -1,4 +1,4 @@
-loglevel: off
+loglevel: OFF
 item-removal:
   try-inventory-place: true
   drop-on-failure: true

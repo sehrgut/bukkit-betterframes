@@ -3,6 +3,8 @@
  */
 package com.alphahelical.bukkit.labelframes;
 
+import java.util.logging.Level;
+
 import com.alphahelical.bukkit.SGPlugin;
 
 /**
@@ -23,7 +25,7 @@ public class LabelFrames extends SGPlugin {
 		this.saveDefaultConfig();
 		this.getConfig().options().copyDefaults(true);
 		
-		this.getLogger().setLevel(Config.getLogLevel()); // TODO: SGConfig class that does this with magic
+		this.getLogger().setLevel(Level.OFF); // TODO: SGConfig class that does this with magic
 		
 		this.getServer().getPluginManager().registerEvents(new FrameListener(this), this);
 	}
