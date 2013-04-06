@@ -3,6 +3,10 @@
 ##2013-04-05
 - ItemFrameBehaviours
 - Configuration
+- ItemFrameInteraction event
+- ItemFrameInteractionType enum
+- break general API out into core
+- allow modification of other item frames, not just labels
 
 ##Initial Idea
 - Right-click a frame on a chest to open the chest.
