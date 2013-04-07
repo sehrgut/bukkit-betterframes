@@ -1,5 +1,13 @@
-loglevel: OFF
+loglevel: "INFO"
 item-removal:
   try-inventory-place: true
   drop-on-failure: true
   drop-mode: scatter # possible values: place|scatter
+item-rotation:
+  tool: ANY
+  direction: counter_clockwise # possible values:clockwise|counter_clockwise|flip|none
+inventory:
+  open: true
+books:
+  chat: true # not currently possible to open
+  allow-writable: true

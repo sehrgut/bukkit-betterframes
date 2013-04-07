@@ -8,10 +8,11 @@ package com.alphahelical.bukkit.labelframes;
  *
  */
 public enum ItemFrameInteractions {
-	ROTATE_LEFT,
-	ROTATE_RIGHT,
+	ROTATE,
 	BREAK,
-	PASSTHROUGH,
-	REMOVE_ITEM,
-	PLACE_ITEM
+	OPEN_INVENTORY,
+	GET_ITEM,
+	PUT_ITEM,
+	CANCEL,
+	IGNORE
 }

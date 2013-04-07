@@ -3,9 +3,9 @@
  */
 package com.alphahelical.bukkit.labelframes;
 
-import java.util.logging.Level;
-
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.Rotation;
 import org.bukkit.plugin.Plugin;
 import com.alphahelical.bukkit.DropUtil.DropModes;
 import com.alphahelical.util.EnumUtil;
@@ -33,11 +33,33 @@ public class Config {
 	}
 
 	public static DropModes getDropMode() {
-		String mode = getPlugin().getConfig().getString("item-removal.drop-mode");
+		String mode = getPlugin().getConfig().getString("item-removal.drop-mode").toUpperCase();
 		return EnumUtil.find(DropModes.class, mode, DropModes.SCATTER);
 	}
 	
-	public static Level getLogLevel() {
-		return Level.parse(getPlugin().getConfig().getString("loglevel"));
+	public static Rotation getRotation() {
+		String rotation = getPlugin().getConfig().getString("item-rotation.direction").toUpperCase();
+		return EnumUtil.find(Rotation.class, rotation, Rotation.COUNTER_CLOCKWISE);
+	}
+	
+	public static boolean getOpenInventory() {
+		return getPlugin().getConfig().getBoolean("inventory.open");
+	}
+
+	public static Material getRotationTool() {
+		String tool = getPlugin().getConfig().getString("item-rotation.tool").toUpperCase();
+		Material mat = EnumUtil.find(Material.class, tool, null);
+		if (! tool.isEmpty() && ! tool.equalsIgnoreCase("ANY") && mat == null)
+			getPlugin().getLogger().warning(String.format("Invalid item-rotation.tool: %s. Using ANY.", tool));
+		
+		return mat;
+	}
+	
+	public static boolean getChatBooks() {
+		return getPlugin().getConfig().getBoolean("books.chat");
+	}
+	
+	public static boolean getAllowWritableBooks() {
+		return getPlugin().getConfig().getBoolean("books.allow-writable");
 	}
 }
