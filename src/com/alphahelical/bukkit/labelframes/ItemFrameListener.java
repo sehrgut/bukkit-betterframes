@@ -43,7 +43,8 @@ public class ItemFrameListener implements Listener {
 					ib =  new OpenAttachedInventory();
 				} else if (Config.getChatBooks() && ii.hasBookMeta() &&
 						(Config.getAllowWritableBooks() || ! ii.isWriteableBook())) {
-					ib = new ChatBook(true, "The book appears to be blank.");
+					this.plugin.getLogger().info("USE: ChatBook");
+					ib = new ChatBook(true, Config.getEmptyBookMessage());
 				} else if(ItemFrameUtil.isEmpty(f)) {
 					this.plugin.getLogger().info("USE: Default");
 					ib = new Default();
@@ -61,8 +62,12 @@ public class ItemFrameListener implements Listener {
 					ib = new RemoveItem(Config.getTryInventoryPlace(), Config.getDropOnFailure(), Config.getDropMode());
 				}
 				break;
-			case HIT:
-				if (! ItemFrameUtil.isEmpty(f)  &&
+			case HIT: // TODO: blank writable books don't seem to count as books under the hasBookMeta test
+				if (Config.getChatBooks() && ii.hasBookMeta() &&
+						(Config.getAllowWritableBooks() || ! ii.isWriteableBook())) {
+					this.plugin.getLogger().info("HIT: ChatBook");
+					ib = new ChatBook(true, Config.getEmptyBookMessage());
+				} else if (! ItemFrameUtil.isEmpty(f)  &&
 					(Config.getRotationTool() == null || p.getItemInHand().getType().equals(Config.getRotationTool()))
 					) {
 					this.plugin.getLogger().info("HIT: RotateItem");

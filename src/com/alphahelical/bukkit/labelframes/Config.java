@@ -62,4 +62,9 @@ public class Config {
 	public static boolean getAllowWritableBooks() {
 		return getPlugin().getConfig().getBoolean("books.allow-writable");
 	}
+
+	public static String getEmptyBookMessage() {
+		return getPlugin().getConfig().getString("books.empty-message");
+	}
+
 }

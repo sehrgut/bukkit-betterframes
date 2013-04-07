@@ -11,3 +11,4 @@ inventory:
 books:
   chat: true # not currently possible to open
   allow-writable: true
+  empty-message: This book appears to be blank.
