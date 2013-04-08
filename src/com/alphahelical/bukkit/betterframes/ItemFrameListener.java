@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.alphahelical.bukkit.labelframes;
+package com.alphahelical.bukkit.betterframes;
 
 import org.bukkit.entity.ItemFrame;
 import org.bukkit.entity.Player;
@@ -21,9 +21,9 @@ public class ItemFrameListener implements Listener {
 
 	// TODO: config options to protect labels from damage based on protection of their host, or just globally
 
-	private LabelFrames plugin;
+	private BetterFrames plugin;
 	
-	public ItemFrameListener (LabelFrames plugin) {
+	public ItemFrameListener (BetterFrames plugin) {
 		this.plugin = plugin;
 	}
 

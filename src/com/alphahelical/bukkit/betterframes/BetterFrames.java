@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.alphahelical.bukkit.labelframes;
+package com.alphahelical.bukkit.betterframes;
 
 import java.util.logging.Level;
 
@@ -13,7 +13,7 @@ import com.alphahelical.bukkit.SGPlugin;
  * @author kbeckman
  *
  */
-public class LabelFrames extends SGPlugin {
+public class BetterFrames extends SGPlugin {
 	
 	@Override
 	protected void onEnabling() {

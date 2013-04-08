@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.alphahelical.bukkit.labelframes;
+package com.alphahelical.bukkit.betterframes;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
