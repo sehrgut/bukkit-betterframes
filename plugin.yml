@@ -1,4 +1,4 @@
 name: BetterFrames
-main: com.alphahelical.bukkit.labelframes.LabelFrames
+main: com.alphahelical.bukkit.labelframes.BetterFrames
 version: 0.1a
 depend: [SGCore]
