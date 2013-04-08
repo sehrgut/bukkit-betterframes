@@ -1,17 +1,13 @@
 #TODO
 
+##2013-04-07
+- Long-term: more configurable behaviour via trigger system?
+- Is this even possible? Item frame takes as long to break with any tool as a sign. Not a block, so maybe not.
+
 ##2013-04-05
-- ItemFrameBehaviours
-- Configuration
-- ItemFrameInteraction event
-- ItemFrameInteractionType enum
-- break general API out into core
-- allow modification of other item frames, not just labels
-
-##Initial Idea
-- Right-click a frame on a chest to open the chest.
-- Sneak-right-click for item rotation behaviour.
-- Left-click on a frame does not break it.
-- Item frame takes as long to break with any tool as a sign.
-- Sneak-left-click on a frame to remove item.
-
+- DONE: ItemFrameBehaviours
+- DONE: Configuration
+- DONE: ItemFrameInteraction event
+- DONE: ItemFrameInteractionType enum
+- DONE: break general API out into core
+- DONE: allow modification of other item frames, not just labels
