@@ -1,3 +1,13 @@
+# OS Files #
+.DS_Store
+
+# Eclipse Project Files #
+.classpath
+.project
+*.jardesc
+.settings/
+
+# Binary Files
 *.class
 
 # Package Files #
