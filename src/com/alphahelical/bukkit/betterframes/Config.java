@@ -20,7 +20,7 @@ public class Config {
 	private static Plugin plugin;
 	protected static Plugin getPlugin() {
 		if (plugin == null)
-			plugin = Bukkit.getServer().getPluginManager().getPlugin("LabelFrames");
+			plugin = Bukkit.getServer().getPluginManager().getPlugin("BetterFrames");
 		return plugin;
 	}
 
